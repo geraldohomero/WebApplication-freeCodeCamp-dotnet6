@@ -31,12 +31,13 @@ namespace WebApplication1_dotnet6.Controllers
         {
             if (obj.DisplayOrder == 0)
             {         
-                ModelState.AddModelError("name", "O Display Order não pode ser igual a 0");
+                ModelState.AddModelError("DisplayOrder", "The Display Order cannot be 0");
             }                
                 
             if (obj.Name == obj.DisplayOrder.ToString())
             {
-                ModelState.AddModelError("name", "O nome não pode ser igual ao Display Order");
+                ModelState.AddModelError("DisplayOrder", "The Display Order cannot exactly match the Name");
+                ModelState.AddModelError("name", "The Name cannot exactly match the Display Order");
             }
             if (ModelState.IsValid)
             {

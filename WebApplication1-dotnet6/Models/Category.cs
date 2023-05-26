@@ -6,9 +6,9 @@ namespace WebApplication1_dotnet6.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage ="Campo obrigatório")]
+        [Required]
         public string Name { get; set; }
-        [Required(ErrorMessage ="Campo obrigatório - somente números")]
+        [Required]
         public int DisplayOrder { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
